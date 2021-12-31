@@ -21,9 +21,9 @@
       "name": "Popsicle",
       "cardImage": "../images/popsicle.svg",
       "imageUrls": [
-        "../assets/popsicle-lime.svg",
-        "../assets/popsicle-lettuce.svg",
-        "../assets/popsicle-cherry.svg"
+        "../images/popsicle-lime.svg",
+        "../images/popsicle-lettuce.svg",
+        "../images/popsicle-cherry.svg"
       ],
       "price": 8,
       "flavors": [

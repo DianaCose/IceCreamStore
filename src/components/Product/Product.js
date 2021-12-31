@@ -7,7 +7,7 @@ function Product(props) {
         maxWidth: "360px",
         height: "100%",
         padding: "5px",
-        margin: "20px",
+        margin: "10px",
         background: "#FDF6EB",
         cursor: "pointer",
         display: "flex",
@@ -21,6 +21,7 @@ function Product(props) {
           fontFamily: "cursive",
           padding: "5px",
           marginLeft: "5px",
+         
         }}
       >
         {props.name}
