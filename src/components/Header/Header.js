@@ -18,12 +18,12 @@ export default function Header() {
           disableGutters
           sx={{ diplay: "flex", justifyContent: "space-between" }}
         >
-          <NavLink to="/" activeStyle={activeStyle}>
+          <NavLink to="/" activestyle={activeStyle}>
             <IconButton size="large" edge="start" sx={{ ml: 5, color: "#fff" }}>
               <HomeIcon />
             </IconButton>
           </NavLink>
-          <NavLink to="/cart" activeStyle={activeStyle}>
+          <NavLink to="/cart" activestyle={activeStyle}>
             <IconButton size="large" edge="end" sx={{ mr: 5, color: "#fff" }}>
               <ShoppingBasketIcon />
             </IconButton>
