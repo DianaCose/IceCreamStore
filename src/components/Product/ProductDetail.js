@@ -16,6 +16,7 @@ import { useParams } from "react-router-dom";
 function ProductDetail(props) {
   const { name } = useParams();
   const [flavorImage, setFlavorImage] = useState("");
+  const [size, setSize] = useState("");
 
   return (
     <Container
@@ -38,8 +39,9 @@ function ProductDetail(props) {
               value={product.id}
               sx={{
                 maxWidth: "360px",
+                height: "100%",
                 background: "rgb(12, 11, 12, 0.8)",
-                margin: "10px",
+                marginTop: "20px",
               }}
             >
               <Stack
@@ -72,7 +74,7 @@ function ProductDetail(props) {
               <Stack sx={{ margin: "10px" }}>
                 <FormControl
                   variant="filled"
-                  sx={{ m: 1, minWidth: 120, background: "gray" }}
+                  sx={{ m: 1, background: "gray" }}
                 >
                   <InputLabel id="iceCream" sx={{ color: "#fff" }}>
                     Size:
@@ -80,14 +82,20 @@ function ProductDetail(props) {
                   <Select
                     labelId="iceCream"
                     id="demo-simple-select"
-                    label="Age"
+                    label="Size"
+                    value={size}
+                    onChange={(e) => setSize(e.target.value)}
+                    sx={{ color: "#fff" }}
                   >
-                    {product.sizes.map((size) => (
-                      <MenuItem key={size}>{size}</MenuItem>
+                    {product.sizes.map((s) => (
+                      <MenuItem key={s.size} value={s.size}>
+                        {s.size}
+                      </MenuItem>
                     ))}
                   </Select>
                 </FormControl>
               </Stack>
+
               <Typography sx={{ textAlign: "center", color: "#fff" }}>
                 Select your flavor:
               </Typography>
@@ -103,18 +111,16 @@ function ProductDetail(props) {
                     sx={{
                       color: "#fff",
                       fontSize: "16px",
+                      background: `${flavor.color}`,
                     }}
-                    background={flavor.color}
                     label={flavor.name}
                     value={flavor.imageUrl}
                     onClick={() => {
                       setFlavorImage(flavor);
-                      console.log("flavorImage", flavorImage.imageUrl);
                     }}
                   />
                 ))}
               </Stack>
-
               <Stack
                 sx={{
                   justifyContent: "center",

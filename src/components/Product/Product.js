@@ -25,7 +25,6 @@ function Product(props) {
         >
           {props.name}
         </Typography>
-
         <img src={props.cardImage} alt="ice-cream" sx={{ padding: "10px" }} />
       </Paper>
   );

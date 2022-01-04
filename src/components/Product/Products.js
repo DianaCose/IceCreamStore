@@ -14,7 +14,7 @@ function Products(props) {
       </Typography>
       <Grid container sx={{ justifyContent: "center" }}>
         {props.products.map((product) => (
-          <Grid item key={product.id}>
+          <Grid item key={product.id} sx={{m: "15px"}}>
               <Link to={`/${product.name}`}><Product name={product.name} cardImage={product.cardImage} /> </Link>
           </Grid>
         ))}
