@@ -2,7 +2,6 @@ import { Grid, Container, Typography } from "@mui/material";
 import Product from "./Product";
 import { Link } from "react-router-dom";
 
-
 function Products(props) {
   return (
     <Container component="div" sx={{ textAlign: "center" }}>

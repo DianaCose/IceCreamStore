@@ -6,28 +6,35 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import HomeIcon from "@mui/icons-material/Home";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
+import { useState } from "react";
+import Cart from "../Cart/Cart";
 
-const activeStyle = {
-  color: "#FF00FF",
-};
 export default function Header() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <Box sx={{ flexGrow: 1, color: "#fff" }}>
+    <Box sx={{ flexGrow: 1, color: "#fff", height: "60px" }}>
       <AppBar position="static">
         <Toolbar
           disableGutters
           sx={{ diplay: "flex", justifyContent: "space-between" }}
         >
-          <NavLink to="/" activestyle={activeStyle}>
+          <NavLink to="/">
             <IconButton size="large" edge="start" sx={{ ml: 5, color: "#fff" }}>
               <HomeIcon />
             </IconButton>
           </NavLink>
-          <NavLink to="/cart" activestyle={activeStyle}>
-            <IconButton size="large" edge="end" sx={{ mr: 5, color: "#fff" }}>
-              <ShoppingBasketIcon />
-            </IconButton>
-          </NavLink>
+          <IconButton
+            size="large"
+            edge="end"
+            sx={{ mr: 5, color: "#fff" }}
+            onClick={() => setOpen(true)}
+          >
+            <ShoppingBasketIcon />
+          </IconButton>
+          { open && <Cart 
+          onClose={() => setOpen(false)}
+          />}
         </Toolbar>
       </AppBar>
     </Box>

@@ -20,13 +20,11 @@ export default function Footer() {
       >
         <Grid item xs={8}>
           <Stack direction="row" spacing={3}>
-            <Typography sx={{ p: "2" }}>Contact</Typography>
-
-            <Typography sx={{ p: "2" }}>0742 87 15 76</Typography>
+            <Typography sx={{ paddingLeft: "2px", fontFamily:"cursive" }}>"You can't buy happiness, but you can buy ice cream, and that is pretty much the same thing."</Typography>
           </Stack>
         </Grid>
         <Grid item sdx={{ marginRight: "5px" }}>
-          <Typography>About us</Typography>
+          <Typography>Contact us</Typography>
         </Grid>
       </Grid>
     </Box>

@@ -6,7 +6,7 @@ function Product(props) {
         sx={{
           maxWidth: "360px",
           height: "100%",
-          padding: "5px",
+          padding: "15px",
           margin: "10px",
           background: "#FDF6EB",
           cursor: "pointer",
@@ -18,9 +18,9 @@ function Product(props) {
         <Typography
           variant="h5"
           sx={{
-            fontFamily: "cursive",
             padding: "5px",
             marginLeft: "5px",
+            // textDecorationLine:"none"
           }}
         >
           {props.name}

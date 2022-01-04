@@ -72,10 +72,7 @@ function ProductDetail(props) {
               </Stack>
 
               <Stack sx={{ margin: "10px" }}>
-                <FormControl
-                  variant="filled"
-                  sx={{ m: 1, background: "gray" }}
-                >
+                <FormControl variant="filled" sx={{ m: 1, background: "gray" }}>
                   <InputLabel id="iceCream" sx={{ color: "#fff" }}>
                     Size:
                   </InputLabel>
